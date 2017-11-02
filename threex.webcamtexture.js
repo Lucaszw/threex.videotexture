@@ -16,13 +16,13 @@ THREEx.WebcamTexture	= function(){
 			video.src	= URL.createObjectURL(stream);
 		}, function(error){
 			alert('you got no WebRTC webcam');
-		});		
+		});
 	}else if(navigator.mozGetUserMedia){
 		navigator.mozGetUserMedia({video:true}, function(stream){
 			video.src	= URL.createObjectURL(stream);
 		}, function(error){
 			alert('you got no WebRTC webcam');
-		});				
+		});
 	}else	console.assert(false)
 
 
@@ -36,7 +36,7 @@ THREEx.WebcamTexture	= function(){
 	 */
 	this.update	= function(delta, now){
 		if( video.readyState !== video.HAVE_ENOUGH_DATA )	return;
-		texture.needsUpdate	= true;		
+		texture.needsUpdate	= true;
 	}
 
 	/**
